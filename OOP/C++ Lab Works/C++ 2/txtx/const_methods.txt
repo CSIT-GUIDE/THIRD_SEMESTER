@@ -1,0 +1,49 @@
+/*
+	Name: Ashim Regmi
+	Roll No: 0201
+	Section: B
+	Description: Program to demonstrate the use of const methods.
+*/
+
+
+#include <iostream>
+using namespace std;
+
+class Distance{
+	
+	private:
+		int feet;
+		float inches;
+	public:
+		Distance(){
+		
+			feet = 0;
+			inches = 0.0;
+		}
+		
+		Distance(int ft, float in){
+			
+			feet = ft;
+			inches = in;
+		}
+		
+		void display() const{
+		
+			cout << feet << "\'-" << inches << "\"" << endl;
+			//cannot do feet = 'value' or inches = 'value'
+		}
+};
+
+int main(){
+	
+	Distance d1(5, 3.2), d2;
+	
+	d1.display();
+	d2.display();
+}
+
+/*
+Output:
+5'3.2"
+0' 0"
+*/

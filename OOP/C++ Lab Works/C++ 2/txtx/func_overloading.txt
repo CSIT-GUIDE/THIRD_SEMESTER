@@ -1,0 +1,47 @@
+/*
+	Name: Ashim Regmi
+	Roll No: 0201
+	Section: B
+	Description: Program to demonstrate function overloading.
+*/
+
+#include <iostream>
+using namespace std;
+
+void repchar();
+void repchar(char);
+void repchar(char, int);
+
+int main(){
+	
+	repchar();
+	repchar('*');
+	repchar('+', 30);
+}
+
+void repchar(void){
+	
+	for(int i = 1; i <= 20; i++)
+		cout << '*';
+	cout << endl;
+}
+
+void repchar(char ch){
+	
+	for(int i = 1; i <= 25; i++)
+		cout << ch;
+	cout << endl;
+}
+
+void repchar(char ch, int n){
+	
+	for(int i = 1; i <= n; i++)
+		cout << ch;
+	cout << endl;
+}
+/*
+Output:
+********************
+*************************
+++++++++++++++++++++++++++++++
+*/

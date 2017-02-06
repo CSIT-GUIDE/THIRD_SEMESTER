@@ -1,0 +1,41 @@
+/*
+	Name: Ashim Regmi
+	Roll No: 0201
+	Section: B
+	Description: Program to demonstrate passing data types using pointers
+*/
+
+
+#include <iostream>
+using namespace std;
+
+void exchange(int *, int *);
+
+int main(){
+	
+	int a = 5, b = 7;
+	
+	cout << "Before exchange: ";
+	cout << "a = " << a << endl << "b = " << b << endl;
+	
+	exchange(&a, &b);
+	
+	cout << "After exchange: ";
+	cout << "a = " << a << endl << "b = " << b;
+}
+
+void exchange(int *x, int *y){
+	
+	int t;
+	t = *x;
+	*x = *y;
+	*y = t;
+}
+
+/* Output:
+
+Before exchange: a = 5
+b = 7
+After exchange: a = 7
+b = 5
+*/
